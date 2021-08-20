@@ -11,8 +11,17 @@ namespace Problema02
 
             num1 = 30;
             num2 = 60;
-            result = Convert.ToByte(num1 * num2);
-            Console.WriteLine("{0} x {1} = {2}", num1, num2, result);
+
+            try
+            {
+                result = Convert.ToByte(num1 * num2);
+                Console.WriteLine("{0} x {1} = {2}", num1, num2, result);
+            }
+            catch (System.OverflowException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
             Console.ReadLine();
         }
     }

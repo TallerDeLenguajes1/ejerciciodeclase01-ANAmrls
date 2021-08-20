@@ -15,7 +15,15 @@ namespace ManejoDeErrores
 
             for (int i = 0; i <= 5; i++)
             {
-                Console.WriteLine(list[i].ToString());
+                try
+                {
+                    Console.WriteLine(list[i].ToString());
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Indice fuera de los limites del arreglo");
+                }
+                
             }
             Console.ReadLine();
         }
